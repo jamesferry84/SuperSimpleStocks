@@ -15,12 +15,19 @@ Calculating Dividend Yield....
 
 
 Symbol: TEA
+
 Type: Common
+
 Last Dividend: 0
+
 Fixed Dividend: 0
+
 Par Value: 100
+
 Dividend Yield: 0
+
 P/E Ratio:
+
 VWSP: 0
 
 
