@@ -61,7 +61,7 @@ namespace SuperSimpleStocksTests.ServiceTests
             const int marketPriceTwo = 200;
             const int stockCount = 2;
             double expectedValue = marketPriceOne * marketPriceTwo;
-            expectedValue = Math.Pow(expectedValue, 1/stockCount);
+            expectedValue = Math.Pow(expectedValue, 1.0/stockCount);
 
             var actualValue = stockService.CalculateAllShareIndex();
 
@@ -69,7 +69,7 @@ namespace SuperSimpleStocksTests.ServiceTests
         }
 
         [TestMethod]
-        public void GivenNoStocksCalculateAllShareIndexThrowDivideByZeroException()
+        public void GivenNoStocksCalculateAllShareIndexReturnZero()
         {
             var stocks = new List<Stock>();
             IStockService stockService = new StockService(stocks);
@@ -80,7 +80,7 @@ namespace SuperSimpleStocksTests.ServiceTests
         }
 
         [TestMethod]
-        public void GivenMarketPriceIsZeroCalculateDividendYieldForCommonStockThrowCannotDivideByZeroException()
+        public void GivenMarketPriceIsZeroCalculateDividendYieldForCommonStockReturnNull()
         {
             var stock = TestData.GetTestCommonStock();
             var stockManager = new StockService();

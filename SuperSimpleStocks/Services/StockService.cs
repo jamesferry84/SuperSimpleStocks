@@ -45,7 +45,7 @@ namespace SuperSimpleStocks.Services
                
 
             var totalMarketPrice = Stocks.Aggregate<Stock, double>(1, (current, stock) => current*stock.MarketPrice);
-            return Math.Pow(totalMarketPrice, 1/Stocks.Count);
+            return Math.Pow(totalMarketPrice, 1.0/Stocks.Count);
         }
 
         public double? CalculateDividendYield(Stock stock, double marketPrice)
